@@ -15,20 +15,6 @@ def run():
     from_ = datetime.datetime(2024, 10, 18)
     to_ = datetime.datetime(2024, 11, 20)
     interval = CandleInterval.CANDLE_INTERVAL_DAY  # День
-    # try:
-    #     # Используем контекстный менеджер для клиента
-    #     with Client(TOKEN_FULL) as client:
-    #         api = TinkoffAPI(client)
-    #         candles = api.get_historical_candles(figi_, from_, to_, interval)
-    #         if candles:
-    #             for candle in candles:
-    #                 print(candle)
-    #         else:
-    #             print("No candles data available.")
-    # except RequestError as e:
-    #     print(f"RequestError occurred: {str(e)}")
-    # except Exception as e:
-    #     print(f"An unexpected error occurred: {str(e)}")
 
     try:
         with Client(TOKEN_FULL) as client:
